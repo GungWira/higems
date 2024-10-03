@@ -1,0 +1,956 @@
+nav{
+    position: absolute;
+    top: 0;
+    max-width: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+nav.fixNav{
+    position: absolute !important;
+    background-color: transparent;
+    top: 0;
+}
+nav.fixNav .container .navigation-side .item-nav a,
+nav.fixNav .container .mobile-nav .boxInput input,
+nav.fixNav .container .mobile-nav a p{
+    color: white;
+}
+nav.fixNav .container .mobile-nav .boxInput input{
+    background-image: url(../svgs/search_white.svg);
+}
+nav.fixNav .container .extra-side .signs,
+nav.fixNav .container .mobile-nav .boxInput button{
+    background-color: transparent;
+}
+nav.scrollNav{
+    top: -150px;
+    transition: .4s ease-in-out;
+    background-color: white;
+    position: fixed;
+}
+nav.fixNav .container .logo-side a p{
+    color: white;
+}
+nav.fixNav .container .extra-side .options p{
+    color: white;
+}
+nav.fixNav .container .extra-side .options span{
+    background-color: white;
+}
+nav .container{
+    max-width: 1440px;
+    width: 100%;
+}
+nav .container .mobile-nav{
+    display: flex;
+}
+nav .container .mobile-nav input{
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* HERO */
+.hero{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-end;
+    background-image: url(../imgs/packageDetail_hero.png);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    --hero-before-op : 0
+}
+.hero::before{
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: #1d1d1d;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: var(--hero-before-op);
+}
+.hero .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    max-width: 1440px;
+    width: 100%;
+    z-index: 2;
+    height: 100%;
+    gap: 128px;
+    padding-bottom: 64px;
+    position: relative;
+    min-height: 100vh;
+}
+.hero .container .navigationHero{
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 128px);
+    position: absolute;
+    top: 45vh;
+    justify-content: space-between;
+    align-items: center;
+    left: 64px;
+}
+.hero .container .navigationHero button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    width: 52px;
+    aspect-ratio: 1;
+    transition: .4s ease-in-out;
+    opacity: .6;
+    cursor: pointer;
+}
+.hero .container .navigationHero button img{
+    width: 32px;
+}
+.hero .container .navigationHero button:hover{
+    opacity: 1;
+}
+.hero .container .detailHero{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    position: relative;
+}
+.hero .container .detailHero h1{
+    margin: 8px 0;
+}
+.hero .container .detailHero p u{
+    text-decoration: underline;
+    margin-right: 8px;
+}
+.hero .container .detailHero .side{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12px;
+}
+.hero .container .detailHero .sosmed{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+
+@media screen and (max-width : 1024px) {
+    .hero .container .topSide .midSide h1{
+        font-size: 72px;
+    }
+    .hero .container .topSide .midSide p.normalSize{
+        width: 70%;
+    }
+}
+@media screen and (max-width : 856px) {
+    .hero .container .topSide .leftSide, .hero .container .topSide .rightSide{
+        display: none;
+    }
+    .hero .container{
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero .container .detailHero{
+        margin-top: unset;
+        padding-top: unset;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .hero .container .bottomSide{
+        position: absolute;
+        bottom: 64px;
+    }
+    .hero .container .detailHero .sosmed{
+        position: relative;
+    }
+    .hero .container .navigationHero{
+        display: none;
+    }
+}
+@media screen and (max-width : 562px) {
+    .hero .container .topSide .midSide h1{
+        font-size: 48px;
+    }
+    .hero .container .bottomSide .sosmed img{
+        height: 32px;
+    }
+    .hero .container .bottomSide .navigasiProg .prog{
+        width: 32px;
+    }
+}
+/* HERO */
+/* CONTENT */
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    margin-top: 140px;
+}
+.content .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+.content .container .splitTwo{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 16px;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+.content .container .splitTwo .side{
+    display: flex;
+    flex: 1;
+}
+.content .container .overview .side .specialPrice{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: center;
+    padding: 20px;
+    border-radius: 16px;
+    background-color: #2abea010;
+}
+.content .container .overview .side .specialPrice  .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+}
+.content .container .overview .side .specialPrice .left .oneSide{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+.content .container .overview .side .specialPrice .left .oneSide .s{
+    text-decoration: line-through;
+    opacity: .4;
+}
+.content .container .overview .side .specialPrice .left .oneSide .green{
+    color: #2ABEA1;
+}
+.content .container .overview .side .specialPrice .right button{
+    padding: 8px 24px;
+    border-radius: 8px;
+    background-color: #2ABEA1;
+    cursor: pointer;
+}
+.content .container .overview .side.linked{
+    display: flex;
+    gap: 12px;
+}
+.content .container .overview .side .itemSide{
+    display: flex;
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 16px;
+}
+.content .container .overview .side .itemSide a{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items:center;
+    cursor: pointer;
+}
+.content .container .overview .side .itemSide a img{
+    height: 40px;
+}
+.content .container .information .side{
+    background-color: white;
+    margin-top: 16px;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+    gap: 8px;
+    padding-bottom: 32px;
+    transition: .2s ease-in-out;
+}
+.content .container .information .side p.mediumSize{
+    margin-bottom: 12px;
+}
+.content .container .information .side p.op{
+    margin-bottom: 8px;
+    text-indent: 20px;
+    text-align: justify;
+    position: relative;
+    min-height: fit-content;
+}
+.content .container .information .side span{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 100%);
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    padding-top: 40px;
+    cursor: pointer;
+}
+.content .container .information .side span:hover{
+    text-decoration: underline;
+}
+.content .container .information .side .list{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4px;
+    width: 100%;
+}
+.content .container .information .side .list .itemList{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+}
+.content .container .information .side .list .itemList .point{
+    display: flex;
+    flex: .1;
+    justify-content: flex-start;
+    align-items: center;
+}
+.content .container .information .side .list .itemList .point span{
+    width: 4px;
+    height: 4px;
+    background: #1d1d1d;
+    border-radius: 100px;
+    position: relative;
+    padding: unset;
+    cursor: unset;
+    bottom: unset;
+    left: unset;
+    opacity: .5;
+    margin-right: 8px;
+}
+.content .container .information .side .list .itemList .point p{
+    white-space: nowrap;
+    width: 130px;
+}
+.content .container .information .side .list .itemList .do{
+    width: 100%;
+}
+.content .container .option{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    background-color: white;
+    width: 100%;
+    border-radius: 16px;
+    padding: 24px;
+}
+.content .container .option p.semiFont{
+    margin-bottom: 8px;
+}
+.content .container .option .date{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 8px;
+    overflow: scroll;
+}
+.content .container .option .coverDate{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    overflow: hidden;
+    margin: 12px 0;
+}
+.content .container .option .coverDate .otherDate{
+    display: flex;
+    white-space: nowrap;
+    padding: 8px 24px;
+    cursor: pointer;
+    border: 1px solid #1d1d1d;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
+.content .container .option .coverDate .otherDate p{
+    margin-bottom: 0;
+}
+.content .container .option .date::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+.content .container .option .date .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 8 - 8px);
+    min-width: 100px;
+    padding: 8px;
+    border: 1px solid #1d1d1d;
+    border-radius: 12px;
+    opacity: .5;
+    cursor: pointer;
+    gap: 0px;
+    transition: .4s ease-in-out;
+}
+.content .container .option .date .item:hover{
+    border: 1px solid #2ABEA1;
+    opacity: 1;
+    background-color: #2abea017;
+}
+.content .container .option .date .item.active{
+    opacity: 1;
+    background-color: #2ABEA1;
+    border: 1px solid #1a7f6b;
+}
+.content .container .option .date .item.active p{
+    color: white;
+}
+.content .container .option .date .item.active:hover{
+    background-color: #2ABEA1;
+    border: 1px solid #1a7f6b;
+}
+.content .container .option .boxPackage{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    gap: 12px;
+}
+.content .container .option .boxPackage .item{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: stretch;
+    border:  1px solid #1d1d1d38;
+    padding: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+.content .container .option .boxPackage .item:hover{
+    background-color: #FBFFFD;
+    border: 1px solid #23895B;
+}
+.content .container .option .boxPackage .item .detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex: 2.5;
+}
+.content .container .option .boxPackage .item .detail p{
+    margin-bottom: 0;
+}
+.content .container .option .boxPackage .item .detail p.op{
+    margin-bottom: 8px;
+}
+.content .container .option .boxPackage .item .detail .more{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    color: #2ABEA1;
+}
+.content .container .option .boxPackage .item .action{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+    gap: 8px;
+    flex: 1;
+}
+.content .container .option .boxPackage .item .action p{
+    margin-bottom: 0;
+}
+.content .container .option .boxPackage .item .action .top{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+.content .container .option .boxPackage .item .action .top p.s{
+    text-decoration: line-through;
+    opacity: .4;
+}
+.content .container .option .boxPackage .item .action .top span{
+    background-color: #2ABEA1;
+    padding: 2px 8px;
+    border-radius: 2px;
+}
+.content .container .option .boxPackage .item .action .bottom{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content .container .option .boxPackage .item .action .bottom button{
+    width: 100%;
+    padding: 8px 32px;
+    background-color: #2ABEA1;
+    border-radius: 8px;
+}
+.content .container .option .actionMore{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.content .container .option .actionMore button{
+    background-color: transparent;
+    cursor: pointer;
+}
+.content .container .option .actionMore button img{
+    width: 16px;
+    transform: rotate(90deg);
+}
+
+.content .container .maps{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 16px;
+    margin-top: 40px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.content .container .maps .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex: 5;
+    gap: 8px;
+    background-color: white;
+    padding: 24px;
+    border-radius: 16px;
+}
+.content .container .maps .left iframe{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    margin-top: 12px;
+}
+.content .container .maps .right{
+    display: flex;
+    flex: 2;
+    background-color: white;
+    padding: 24px;
+    border-radius: 16px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-width: 200px;
+}
+.content .container .maps .right .listCheckpoint{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 8px;
+}
+.content .container .maps .right .listCheckpoint .item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+.content .container .maps .right .listCheckpoint .item .point{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content .container .maps .right .listCheckpoint .item .point .outer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 100px;
+    border: 1.5px solid #C8C8C8;
+    padding: 2px;
+}
+.content .container .maps .right .listCheckpoint .item .point .outer .inner{
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: #F6F6F6;
+    border-radius: 100px;
+}
+.content .container .maps .right .listCheckpoint .item.active .point .outer{
+    border: 1.5px solid #2ABEA1;
+}
+.content .container .maps .right .listCheckpoint .item.active .point .outer .inner{
+    background-color: #2ABEA1;
+}
+.content .container .widgets{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 40px;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 16px;
+}
+.content .container .widgets .widget{
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    border-radius: 16px;
+    padding: 20px;
+}
+.content .container .widgets .widget img{
+    width: 40px;
+}
+.content .container .testimonial{
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    gap: 16px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+.content .container .testimonial .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 24px;
+    border-radius: 16px;
+    background-color: white;
+    flex: 3;
+    min-width: 364px;
+}
+.content .container .testimonial .left .ratingBox{
+    margin-top: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+.content .container .testimonial .left .listRating{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+}
+.content .container .testimonial .left .listRating .itemRating{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+    align-items: center;
+}
+.content .container .testimonial .left .listRating .itemRating p{
+    white-space: nowrap;
+}
+.content .container .testimonial .left .listRating .itemRating p.mark{
+    min-width: 115px;
+}
+.content .container .testimonial .left .listRating .itemRating p.count{
+    min-width: 45px;
+    text-align: right;
+}
+.content .container .testimonial .left .listRating .itemRating .outer{
+    width: 100%;
+    height: 8px;
+    background-color: #2ABEA1;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+}
+.content .container .testimonial .right{
+    display: flex;
+    flex-direction: column;
+    flex: 7;
+    background-color: white;
+    padding: 24px;
+    border-radius: 16px;
+}
+.content .container .testimonial .right .mediumSize{
+    margin-bottom: 24px;
+}
+.content .container .testimonial .right .itemTestimonial{
+    border-top: 1px solid #1d1d1d0c;
+}
+.content .container .testimonial .right .header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 24px;
+}
+.content .container .testimonial .right .header .profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+.content .container .testimonial .right .header .profile img{
+    height: 48px;
+}
+.content .container .testimonial .right .header .profile .text{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.content .container .testimonial .right .header .extra{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 4px;
+}
+.content .container .testimonial .right .header .extra .like{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.content .container .testimonial .right .header .extra .like img{
+    height: 20px;
+}
+.content .container .testimonial .right .rateing{
+    margin: 12px 0;
+}
+.content .container .testimonial .right .rateing img{
+    height: 20px;
+}
+.content .container .testimonial .right .contents{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+.content .container .testimonial .right .picture{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+/* CONTENT */
+/* OTHER */
+.package{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    margin-top: 140px;
+}
+.package .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    gap: 32px;
+}
+.package .container .boxPackage{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    overflow-x: scroll;
+    width: 100%;
+}
+.package .container .boxPackage::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+.package .container .boxPackage .card{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    min-width: 302px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.package .container .boxPackage .card .imageCard{
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    height: 172px;
+    padding: 20px;
+}
+.package .container .boxPackage .card .imageCard p{
+    background-color: white;
+    padding: 4px 16px;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 100px;
+}
+.package .container .boxPackage .card .detail{
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4px;
+}
+.package .container .boxPackage .card .detail .price{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+}
+.package .container .boxPackage .card .detail .price p.strike{
+    text-decoration: line-through;
+    opacity: .4;
+}
+.package .container .boxPackage .card .detail .price p.disc{
+    background-color: #2ABEA1;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+.package .container .boxPackage .card .detail .location{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+    margin-top: 4px;
+}
+@media screen and (max-width : 1024px) {
+    .content .container .splitTwo{
+        flex-direction: column;
+    }
+    .content .container .option .boxPackage .item{
+        flex-direction: column;
+    }
+    .content .container .widgets .widget{
+        min-width: calc(100% / 2 - 16px) ;
+        flex: unset;
+    }
+    .content .container .widgets{
+        flex-wrap: wrap;
+    }
+    .content .container .testimonial{
+        flex-direction: column;
+    }
+    .content .container .testimonial .left{
+        width: 100%;
+    }
+}
+@media screen and (max-width : 900px) {
+    .content .container .maps{
+        flex-direction: column;
+    }
+    .content .container .maps .left,
+    .content .container .maps .right{
+        flex: unset;
+        width: 100%;
+    }
+}
+@media screen and (max-width : 769px) {
+    .content{
+        margin-top: 80px;
+    }
+}
+@media screen and (max-width : 562px) {
+    .content .container .overview .side .itemSide a img,
+    .content .container .widgets .widget img{
+        height: 28px;
+    }
+    .content .container .overview .side .specialPrice .left .oneSide .green{
+        font-size: 20px;
+    }
+    .content .container .information .side .list .itemList .point p{
+        width: 100px;
+    }
+    .content .container .option .coverDate .otherDate{
+        display: none;
+    }
+    .content .container .widgets{
+        gap: 8px;
+    }
+    .content .container .widgets .widget{
+        min-width: calc(100% / 2 - 8px) ;
+        width: calc(100% / 2 - 8px) ;
+        flex: unset;
+    }
+    .content .container .widgets .widget p{
+        white-space: wrap;
+    }
+    .content .container .testimonial .right .header .profile .text p.semiFont{
+        font-size: 16px;
+    }
+    .content .container .testimonial .right .header .profile img{
+        height: 32px;
+    }
+    .content .container .testimonial .right .rateing img,
+    .content .container .testimonial .right .header .extra .like img{
+        height: 16px;
+    }
+}
+@media screen and (max-width : 450px) {
+    .content .container .overview .side .specialPrice .left .oneSide .s{
+        display: none;
+    }
+    .content .container .overview .side.linked{
+        flex-direction: column;
+    }
+    .content .container .widgets .widget{
+        gap: 8px;
+    }
+}

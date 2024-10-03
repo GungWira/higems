@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- MY CSS -->
+     <link rel="stylesheet" href="../assets/css/main.css">
+     <link rel="stylesheet" href="../assets/css/navbar.css">
+     <link rel="stylesheet" href="../assets/css/package.search.css">
+
+     <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <title>Higems | Jelajahi Hidden Gems Indonesia</title>
+</head>
+<body>
+    <!-- START NAVBAR -->
+    <nav>
+        <div class="container">
+            <div class="logo-side">
+                <button class="ham-nav">
+                    <img src="../assets/svgs/ham.svg" alt="ham icon">
+                </button>
+                <a href="index.html">
+                    <img src="../assets/svgs/logo.svg" alt="logo">
+                    <p class="black nexa">Higems</p>
+                </a>
+            </div>
+            <div class="navigation-side">
+                <div class="item-nav ">
+                    <a href="index.html" class="normalSize mediumFont black">Home</a>
+                    <span></span>
+                </div>
+                <div class="item-nav ">
+                    <a href="destination.html" class="normalSize mediumFont black">Destination</a>
+                    <span></span>
+                </div>
+                <div class="item-nav active">
+                    <a href="package.html" class="normalSize mediumFont black">Package</a>
+                    <span></span>
+                </div>
+            </div>
+            <div class="mobile-nav">
+                <a href="index.html">
+                    <img src="../assets/svgs/logo.svg" alt="logo">
+                    <p class="black nexa">Higems</p>
+                </a>
+                <input type="text" placeholder="Type something here ...">
+            </div>
+            <div class="extra-side">
+                <button class="sign-mobile">
+                    <img src="../assets/svgs/profile.svg" alt="">
+                </button>
+                <div class="options">
+                    <img src="../assets/svgs/universal.svg" alt="universal">
+                    <span></span>
+                    <p class="black normalSize mediumFont">IDR</p>
+                </div>
+                <div class="signs">
+                    <p class="white mediumFont normalSize">Sign In</p>
+                </div>
+            </div>
+        </div>
+        <div class="container searchNav">
+            <div class="boxInput">
+                <input type="text" placeholder="Type something here ..." value="Bali">
+                <button type="button" class="white normalSize mediumFont">Cari</button>
+            </div>
+            <div class="filter">
+                <button class="dropdown">
+                    <p class="black normalFont normalSize">Package</p>
+                    <img src="../assets/svgs/down_black.svg" alt="down">
+                </button>
+                <div class="dropdown-menu">
+                    <a href="destination.search.html" class="normalFont normalSize black op">Destination</a>
+                    <a href="package.search.html" class="normalFont normalSize black op">Package</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- MOBILE SIDE NAVBAR  -->
+    <section class="mobileSideNav">
+        <div class="cover">
+            <div class="topSide">
+                <div class="closeCover">
+                    <button type="button" class="close">
+                        <img src="../assets/svgs/cross.svg" alt="">
+                    </button>
+                </div>
+                <div class="extra">
+                    <img src="../assets/svgs/universal.svg" alt="universal">
+                    <p class="black mediumSize mediumFont">Indonesia</p>
+                    <span></span>
+                    <p class="black mediumSize mediumFont">IDR</p>
+                </div>
+            </div>
+            <div class="bodySide">
+                <a href="index.html" class="normalFont black mediumSize">Home</a>
+                <a href="destination.html" class="normalFont black mediumSize">Destination</a>
+                <a href="package.html" class="normalFont black mediumSize">Package</a>
+            </div>
+            <div class="footSide">
+                <a href="login.html" class="normalFont black mediumSize">Sign In</a>
+            </div>
+        </div>
+    </section>
+    <!-- START NAVBAR -->
+    <!-- START CONTENT -->
+    <section class="content">
+        <div class="container">
+            <div class="leftSide">
+                <form class="boxFilter">
+                    <p class="overpass mediumSize black">Kategori</p>
+                    <span></span>
+                    <div class="item">
+                        <input type="radio" name="kategori" id="Rekreasi">
+                        <label class="black normalFont normalSize" for="Rekreasi">Rekreasi</label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" name="kategori" id="Pertunjukan">
+                        <label class="black normalFont normalSize" for="Pertunjukan">Pertunjukan</label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" name="kategori" id="Kuliner">
+                        <label class="black normalFont normalSize" for="Kuliner">Kuliner</label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" name="kategori" id="Area Bermain">
+                        <label class="black normalFont normalSize" for="Area Bermain">Area Bermain</label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" name="kategori" id="Monument">
+                        <label class="black normalFont normalSize" for="Monument">Monument</label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" name="kategori" id="Penginapan">
+                        <label class="black normalFont normalSize" for="Penginapan">Penginapan</label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" name="kategori" id="Paket Tur">
+                        <label class="black normalFont normalSize" for="Paket Tur">Paket Tur</label>
+                    </div>
+                </form>
+                <div class="boxPrice">
+                    <p class="overpass mediumSize black">Kisaran harga</p>
+                    <span></span>
+                    <div class="cover">
+                        <p class="normalFont normalSize black" id="range-value">Rp 0 - Rp 1.000.000</p>
+                        <img src="../assets/svgs/down_black.svg" alt="">
+                    </div>
+                    <div class="slider-container">
+                        <input type="range" id="min-slider" min="0" max="1000000" step="1000" value="0">
+                        <input type="range" id="max-slider" min="0" max="1000000" step="1000" value="1000000">
+                    </div>
+                </div>
+                <form class="boxFilter">
+                    <p class="overpass mediumSize black">Special</p>
+                    <div class="item">
+                        <input type="radio" name="special" id="weekend">
+                        <label class="black normalFont normalSize" for="weeked">Weekend Sale</label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" name="special" id="School">
+                        <label class="black normalFont normalSize" for="School">School Offer</label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" name="special" id="New">
+                        <label class="black normalFont normalSize" for="New">New Year Sale</label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" name="special" id="mega">
+                        <label class="black normalFont normalSize" for="mega">Mega Discount</label>
+                    </div>
+                </form>
+            </div>
+            <div class="rightSide">
+                <div class="coverTop">
+                    <div class="leftTop">
+                        <p class="overpass black semiSize">Hasil pencarian untuk “Bali”</p>
+                        <p class="black normalFont normalSize op">Berikut beberapa hasil pencarian yang relevan untuk Anda</p>
+                        <div class="filter">
+                            <button class="dropdown">
+                                <p class="black normalFont normalSize">Paket Wisata</p>
+                                <img src="../assets/svgs/down_black.svg" alt="down">
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="destination.search.html" class="normalFont normalSize black op">Destinasi</a>
+                                <a href="package.search.html" class="normalFont normalSize black op">Paket Wisata</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rightTop">
+                        <button class="sort">
+                            <img src="../assets/svgs/sort.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="boxCard">
+                    <div class="card">
+                        <div class="imageCard" style="background-image: url(../assets/imgs/package_card_1.png);">
+                            <p class="type miniSize normalFont black">1 Ticket</p>
+                        </div>
+                        <div class="detail">
+                            <div class="price">
+                                <p class="normalSize semiFont black">Rp 320.000</p>
+                                <p class="miniSize normalFont black strike">Rp 640.000</p>
+                                <p class="disc miniSize normalFont white op">SAVE 30%</p>
+                            </div>
+                            <p class="normalFont normalSize black op">Tiket Wisata Bali Safari : 1 Orang Dewasa Bebas ...</p>
+                            <div class="location">
+                                <img src="../assets/svgs/location.svg" alt="">
+                                <p class="miniSize op normalFont black">Gianyar, Bali</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imageCard" style="background-image: url(../assets/imgs/package_card_2.png);">
+                            <p class="type miniSize normalFont black">1 Ticket</p>
+                        </div>
+                        <div class="detail">
+                            <div class="price">
+                                <p class="normalSize semiFont black">Rp 30.000</p>
+                                <p class="miniSize normalFont black strike">Rp 60.000</p>
+                                <p class="disc miniSize normalFont white op">SAVE 50%</p>
+                            </div>
+                            <p class="normalFont normalSize black op">Tiket Masuk Taman Ujung : 1 Orang Dewasa Bebas ...</p>
+                            <div class="location">
+                                <img src="../assets/svgs/location.svg" alt="">
+                                <p class="miniSize op normalFont black">Karangasem, Bali</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imageCard" style="background-image: url(../assets/imgs/package_card_3.png);">
+                            <p class="type miniSize normalFont black">1 Package</p>
+                        </div>
+                        <div class="detail">
+                            <div class="price">
+                                <p class="normalSize semiFont black">Rp 75.000</p>
+                                <p class="miniSize normalFont black strike">Rp 150.000</p>
+                                <p class="disc miniSize normalFont white op">SAVE 50%</p>
+                            </div>
+                            <p class="normalFont normalSize black op">Paket Wisata Pura Besakih Free Guide : 1 Orang Dewasa...</p>
+                            <div class="location">
+                                <img src="../assets/svgs/location.svg" alt="">
+                                <p class="miniSize op normalFont black">Karangasem, Bali</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imageCard" style="background-image: url(../assets/imgs/package_card_4.png);">
+                            <p class="type miniSize normalFont black">1 Ticket</p>
+                        </div>
+                        <div class="detail">
+                            <div class="price">
+                                <p class="normalSize semiFont black">Rp 50.000</p>
+                                <p class="miniSize normalFont black strike">Rp 100.000</p>
+                                <p class="disc miniSize normalFont white op">SAVE 50%</p>
+                            </div>
+                            <p class="normalFont normalSize black op">Tiket Menonton Tari Kecak Uluwatu : 1 Orang Dewasa ...</p>
+                            <div class="location">
+                                <img src="../assets/svgs/location.svg" alt="">
+                                <p class="miniSize op normalFont black">Badung, Bali</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imageCard" style="background-image: url(../assets/imgs/package_card_5.png);">
+                            <p class="type miniSize normalFont black">1 Serve</p>
+                        </div>
+                        <div class="detail">
+                            <div class="price">
+                                <p class="normalSize semiFont black">Rp 85.000</p>
+                                <p class="miniSize normalFont black strike">Rp 170.000</p>
+                                <p class="disc miniSize normalFont white op">SAVE 50%</p>
+                            </div>
+                            <p class="normalFont normalSize black op">Paket Makan Siang di Bebek Tepi Sawah : 1 Orang Dewa ...</p>
+                            <div class="location">
+                                <img src="../assets/svgs/location.svg" alt="">
+                                <p class="miniSize op normalFont black">Gianyar, Bali</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imageCard" style="background-image: url(../assets/imgs/package_card_6.png);">
+                            <p class="type miniSize normalFont black">1 Stay</p>
+                        </div>
+                        <div class="detail">
+                            <div class="price">
+                                <p class="normalSize semiFont black">Rp 600.000</p>
+                                <p class="miniSize normalFont black strike">Rp 1.200.000</p>
+                                <p class="disc miniSize normalFont white op">SAVE 50%</p>
+                            </div>
+                            <p class="normalFont normalSize black op">Menginap di Ayana Resort Jimbaran Bali : 1 Orang De ...</p>
+                            <div class="location">
+                                <img src="../assets/svgs/location.svg" alt="">
+                                <p class="miniSize op normalFont black">Badung, Bali</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imageCard" style="background-image: url(../assets/imgs/package_card_7.png);">
+                            <p class="type miniSize normalFont black">1 Ticket</p>
+                        </div>
+                        <div class="detail">
+                            <div class="price">
+                                <p class="normalSize semiFont black">Rp 320.000</p>
+                                <p class="miniSize normalFont black strike">Rp 640.000</p>
+                                <p class="disc miniSize normalFont white op">SAVE 30%</p>
+                            </div>
+                            <p class="normalFont normalSize black op">Tiket Wisata Bali Safari : 1 Orang Dewasa Bebas ...</p>
+                            <div class="location">
+                                <img src="../assets/svgs/location.svg" alt="">
+                                <p class="miniSize op normalFont black">Gianyar, Bali</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imageCard" style="background-image: url(../assets/imgs/package_card_8.png);">
+                            <p class="type miniSize normalFont black">1 Ticket</p>
+                        </div>
+                        <div class="detail">
+                            <div class="price">
+                                <p class="normalSize semiFont black">Rp 320.000</p>
+                                <p class="miniSize normalFont black strike">Rp 640.000</p>
+                                <p class="disc miniSize normalFont white op">SAVE 30%</p>
+                            </div>
+                            <p class="normalFont normalSize black op">Tiket Wisata Bali Safari : 1 Orang Dewasa Bebas ...</p>
+                            <div class="location">
+                                <img src="../assets/svgs/location.svg" alt="">
+                                <p class="miniSize op normalFont black">Gianyar, Bali</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imageCard" style="background-image: url(../assets/imgs/package_card_9.png);">
+                            <p class="type miniSize normalFont black">1 Ticket</p>
+                        </div>
+                        <div class="detail">
+                            <div class="price">
+                                <p class="normalSize semiFont black">Rp 320.000</p>
+                                <p class="miniSize normalFont black strike">Rp 640.000</p>
+                                <p class="disc miniSize normalFont white op">SAVE 30%</p>
+                            </div>
+                            <p class="normalFont normalSize black op">Tiket Wisata Bali Safari : 1 Orang Dewasa Bebas ...</p>
+                            <div class="location">
+                                <img src="../assets/svgs/location.svg" alt="">
+                                <p class="miniSize op normalFont black">Gianyar, Bali</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imageCard" style="background-image: url(../assets/imgs/package_card_10.png);">
+                            <p class="type miniSize normalFont black">1 Ticket</p>
+                        </div>
+                        <div class="detail">
+                            <div class="price">
+                                <p class="normalSize semiFont black">Rp 320.000</p>
+                                <p class="miniSize normalFont black strike">Rp 640.000</p>
+                                <p class="disc miniSize normalFont white op">SAVE 30%</p>
+                            </div>
+                            <p class="normalFont normalSize black op">Tiket Wisata Bali Safari : 1 Orang Dewasa Bebas ...</p>
+                            <div class="location">
+                                <img src="../assets/svgs/location.svg" alt="">
+                                <p class="miniSize op normalFont black">Gianyar, Bali</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imageCard" style="background-image: url(../assets/imgs/package_card_11.png);">
+                            <p class="type miniSize normalFont black">1 Ticket</p>
+                        </div>
+                        <div class="detail">
+                            <div class="price">
+                                <p class="normalSize semiFont black">Rp 320.000</p>
+                                <p class="miniSize normalFont black strike">Rp 640.000</p>
+                                <p class="disc miniSize normalFont white op">SAVE 30%</p>
+                            </div>
+                            <p class="normalFont normalSize black op">Tiket Wisata Bali Safari : 1 Orang Dewasa Bebas ...</p>
+                            <div class="location">
+                                <img src="../assets/svgs/location.svg" alt="">
+                                <p class="miniSize op normalFont black">Gianyar, Bali</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imageCard" style="background-image: url(../assets/imgs/package_card_12.png);">
+                            <p class="type miniSize normalFont black">1 Ticket</p>
+                        </div>
+                        <div class="detail">
+                            <div class="price">
+                                <p class="normalSize semiFont black">Rp 320.000</p>
+                                <p class="miniSize normalFont black strike">Rp 640.000</p>
+                                <p class="disc miniSize normalFont white op">SAVE 30%</p>
+                            </div>
+                            <p class="normalFont normalSize black op">Tiket Wisata Bali Safari : 1 Orang Dewasa Bebas ...</p>
+                            <div class="location">
+                                <img src="../assets/svgs/location.svg" alt="">
+                                <p class="miniSize op normalFont black">Gianyar, Bali</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="filter_mobile clss">
+        <div class="covers">
+            <div class="topSide">
+                <div class="closeCover">
+                    <button type="button" class="close clss">
+                        <img src="../assets/svgs/cross.svg" alt="">
+                    </button>
+                </div>
+                <div class="extra">
+                    <p class="black mediumSize overpass">Filter Pencarian</p>
+                </div>
+            </div>
+            <div class="bodySide">
+                <form class="boxFilter">
+                    <p class="overpass mediumSize black">Kategori</p>
+                    <span></span>
+                    <div class="item">
+                        <input type="radio" name="kategori" id="Rekreasi">
+                        <label class="black normalFont normalSize" for="Rekreasi">Rekreasi</label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" name="kategori" id="Pertunjukan">
+                        <label class="black normalFont normalSize" for="Pertunjukan">Pertunjukan</label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" name="kategori" id="Kuliner">
+                        <label class="black normalFont normalSize" for="Kuliner">Kuliner</label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" name="kategori" id="Area Bermain">
+                        <label class="black normalFont normalSize" for="Area Bermain">Area Bermain</label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" name="kategori" id="Monument">
+                        <label class="black normalFont normalSize" for="Monument">Monument</label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" name="kategori" id="Penginapan">
+                        <label class="black normalFont normalSize" for="Penginapan">Penginapan</label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" name="kategori" id="Paket Tur">
+                        <label class="black normalFont normalSize" for="Paket Tur">Paket Tur</label>
+                    </div>
+                </form>
+                <div class="boxPrice">
+                    <p class="overpass mediumSize black">Kisaran harga</p>
+                    <span></span>
+                    <div class="cover">
+                        <p class="normalFont normalSize black" id="range-value-mob">Rp 0 - Rp 1.000.000</p>
+                        <img src="../assets/svgs/down_black.svg" alt="">
+                    </div>
+                    <div class="slider-container">
+                        <input type="range" id="min-slider-mob" min="0" max="1000000" step="1000" value="0">
+                        <input type="range" id="max-slider-mob" min="0" max="1000000" step="1000" value="1000000">
+                    </div>
+                </div>
+                <form class="boxFilter">
+                    <p class="overpass mediumSize black">Special</p>
+                    <div class="item">
+                        <input type="radio" name="special" id="weekend">
+                        <label class="black normalFont normalSize" for="weeked">Weekend Sale</label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" name="special" id="School">
+                        <label class="black normalFont normalSize" for="School">School Offer</label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" name="special" id="New">
+                        <label class="black normalFont normalSize" for="New">New Year Sale</label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" name="special" id="mega">
+                        <label class="black normalFont normalSize" for="mega">Mega Discount</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- END CONTENT -->
+    <!-- START FOOTER -->
+    <footer class="gradient">
+        <div class="container">
+            <div class="topFooter">
+                <div class="bigSide">
+                    <a href="index.html">
+                        <img src="../assets/svgs/logo_black.svg" alt="logo">
+                        <p class="black nexa mediumSize">Higems</p>
+                    </a>
+                    <p class="black normalFont normalSize op">Temukan berbagai keajaiban yang tersembunyi dibalik kekayaan wisata Indonesia hanya di Higems!</p>
+                    <div class="iconSosmed">
+                        <a href="">
+                            <img src="../assets/svgs/facebook.svg" alt="facebook">
+                        </a>
+                        <a href="">
+                            <img src="../assets/svgs/instagram.svg" alt="instagram">
+                        </a>
+                        <a href="">
+                            <img src="../assets/svgs/twitter.svg" alt="twitter">
+                        </a>
+                        <a href="">
+                            <img src="../assets/svgs/tiktok.svg" alt="tiktok">
+                        </a>
+                    </div>
+                </div>
+                <div class="bigSide alpha">
+                    <div class="smallSide">
+                        <p class="black normalSize semiFont titleNavFooter">Navigation</p>
+                        <p class="black normalSize normalFont">Home</p>
+                        <p class="black normalSize normalFont">Sportcenter</p>
+                        <p class="black normalSize normalFont">Product</p>
+                    </div>
+                    <div class="smallSide">
+                        <p class="black normalSize semiFont titleNavFooter">Other</p>
+                        <p class="black normalSize normalFont">About</p>
+                        <p class="black normalSize normalFont">Promotion</p>
+                        <p class="black normalSize normalFont">Testimonial</p>
+                        <p class="black normalSize normalFont">Blog</p>
+                        <p class="black normalSize normalFont">Villa</p>
+                        <p class="black normalSize normalFont">Deals</p>
+                    </div>
+                    <div class="smallSide alpha">
+                        <p class="black normalSize semiFont titleNavFooter">Extra</p>
+                        <p class="black normalSize normalFont">Guides</p>
+                        <p class="black normalSize normalFont">Terms of Sale</p>
+                        <p class="black normalSize normalFont">Terms of Use</p>
+                        <p class="black normalSize normalFont">Privacy Policy</p>
+                    </div>
+                </div>
+                <div class="bigSide">
+                    <p class="black normalSize semiFont titleNavFooter">Let's Talk</p>
+                    <input type="text" name="mail" id="mail" placeholder="Hai, aku ingin tau lebih!">
+                    <p class="black normalSize normalFont">admin.higems@gmail.com</p>
+                    <p class="black normalSize normalFont">(0361) 1234 5678</p>
+                </div>
+            </div>
+            <div class="bottomFooter">
+                <div class="copyRight">
+                    <img src="../assets/svgs/copyright.svg" alt="copyright">
+                    <p class="black normalFont normalSize">2024 Higems, Inc. All Rights Reserved</p>
+                </div>
+                <div class="extraLinks">
+                    <p class="black normalFont normalSize">Guides</p>
+                    <p class="black normalFont normalSize">Terms of Sale</p>
+                    <p class="black normalFont normalSize">Terms of Use</p>
+                    <p class="black normalFont normalSize">Higems Privacy Policy</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END FOOTER -->
+</body>
+<script>
+     // Initialize the range display
+</script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="../assets/script/navbar-special.js"></script>
+<script src="../assets/script/package.search.js"></script>
+</html>

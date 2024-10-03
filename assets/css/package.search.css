@@ -1,0 +1,589 @@
+nav{
+    background-color: white;
+    max-width: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+nav .container{
+    max-width: 1440px;
+    width: 100%;
+}
+nav .searchNav{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.094);
+    gap: 20px;
+    background-color: white;
+}
+nav .searchNav .boxInput{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+nav .searchNav .boxInput{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border: 1px solid #ebedec;
+    padding: 4px;
+    border-radius: 100px;
+    gap: 32px;
+    background-color: white;
+}
+nav .searchNav .boxInput input{
+    background-color: transparent;
+    padding-left: 40px;
+    background-image: url(../svgs/search.svg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 8px;
+    font-family: MontserratMedium;
+    outline: none;
+    height: 40px;
+    width: 100%;
+}
+nav .searchNav .boxInput button{
+    border-radius: 100px;
+    background-color: #1d1d1d;
+    padding: 0px 24px;
+}
+nav .searchNav .filter{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    background-color: white;
+}
+nav .searchNav .filter .dropdown{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 24px;
+    border-radius: 100px;
+    border: 1px solid #1d1d1d6e;
+    background-color: transparent;
+    gap: 12px;
+    background-color: white;
+}
+nav .searchNav .filter .dropdown img{
+    transition: .2s ease-in-out;
+}
+nav .searchNav .filter .dropdown p{
+    white-space: nowrap;
+}
+.dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    width: 100%;
+    border-radius: 8px;
+  }
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #f0f0f0;
+  }
+  .filter:hover button img{
+    transform: rotate(-90deg);
+  }
+  .filter:hover .dropdown-menu {
+    display: block; 
+  }
+
+/* CONTENT */
+.content{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+}
+.content .container{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.content .container .leftSide{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 24px;
+    flex: 2;
+    min-width: 285px;
+}
+.content .container .leftSide .boxFilter{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: white;
+    padding: 24px;
+    border-radius: 16px;
+    width: 100%;
+}
+.content .container .leftSide .boxFilter p.overpass{
+    margin-bottom: 4px;
+}
+.content .container .leftSide .boxFilter .item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+.content .container .leftSide .boxFilter .item input{
+    cursor: pointer;
+}
+.content .container .leftSide .boxFilter .item label{
+    cursor: pointer;
+}
+.content .container .leftSide .boxFilter span{
+    width: 100%;
+    height: 1px;
+    background-color: #1d1d1d10;
+    margin-bottom: 8px;
+}
+.content .container .leftSide .boxPrice{
+    background-color: white;
+    padding: 24px;
+    border-radius: 16px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.content .container .leftSide .boxPrice p.overpass{
+    margin-bottom: 4px;
+}
+.content .container .leftSide .boxPrice span{
+    width: 100%;
+    height: 1px;
+    background-color: #1d1d1d10;
+    margin-bottom: 16px;
+}
+.content .container .leftSide .boxPrice .cover{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: ease-in-out .4s;
+}
+.content .container .leftSide .boxPrice .cover img{
+    transition: .4s ease-in-out;
+}
+.content .container .leftSide .boxPrice:hover .slider-container{
+    opacity: 1;
+    top: 0px;
+}
+.content .container .leftSide .boxPrice:hover .cover img{
+    transform: rotate(-90deg);
+}
+
+.content .container .leftSide .boxPrice .slider-container {
+    position: relative;
+    width: 100%;
+    top: -5px;
+    opacity: 0;
+    transition: .4s ease-in-out;
+}
+
+.content .container .leftSide .boxPrice input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    background: transparent;
+    position: absolute;
+}
+
+.content .container .leftSide .boxPrice input[type="range"]::-webkit-slider-runnable-track {
+    height: 6px;
+    background: #ddd;
+    border-radius: 3px;
+}
+
+.content .container .leftSide .boxPrice input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #1d1d1d;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    top: -5px;
+}
+
+.content .container .leftSide .boxPrice input[type="range"]:nth-child(2)::-webkit-slider-thumb {
+    z-index: 2;
+}
+
+.content .container .leftSide .boxPrice input[type="range"]:focus {
+    outline: none;
+}
+.content .container .rightSide{
+    display: flex;
+    flex: 6;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.content .container .rightSide .coverTop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+}
+.content .container .rightSide .coverTop .rightTop{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: none;
+}
+.content .container .rightSide .coverTop .rightTop .sort{
+    background-color: white;
+    padding: 8px;
+    border-radius: 100px;
+    width: 40px;
+    aspect-ratio: 1;
+    cursor: pointer;
+}
+.content .container .rightSide .coverTop .rightTop .sort img{
+    height: 20px;
+}
+.content .container .rightSide .filter{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    margin-top: 12px;
+    display: none;
+}
+.content .container .rightSide .filter:hover .dropdown-menu{
+    display: block;
+}
+.content .container .rightSide .filter:hover button img{
+    transform: rotate(-90deg);
+}
+.content .container .rightSide .filter .dropdown{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 24px;
+    border-radius: 100px;
+    border: 1px solid #1d1d1d12;
+    background-color: transparent;
+    gap: 12px;
+    background-color: white;
+}
+.content .container .rightSide .filter .dropdown-menu{
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    width: 100%;
+    border-radius: 8px;
+}
+.content .container .rightSide .filter .dropdown-menu a{
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.content .container .rightSide p.overpass{
+    margin-bottom: 8px;
+}
+.content .container .rightSide .boxCard{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+.content .container .rightSide .boxCard .card{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: calc(100% / 3 - 8px);
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+}
+.content .container .rightSide .boxCard .card:hover{
+    box-shadow: 0px 0px 12px #1d1d1d11;
+}
+.content .container .rightSide .boxCard .card .imageCard{
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    height: 172px;
+    padding: 20px;
+}
+.content .container .rightSide .boxCard .card .imageCard p{
+    background-color: white;
+    padding: 4px 16px;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 100px;
+}
+.content .container .rightSide .boxCard .card .detail{
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4px;
+}
+.content .container .rightSide .boxCard .card .detail .price{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+}
+.content .container .rightSide .boxCard .card .detail .price p.strike{
+    text-decoration: line-through;
+    opacity: .4;
+}
+.content .container .rightSide .boxCard .card .detail .price p.disc{
+    background-color: #2ABEA1;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+.content .container .rightSide .boxCard .card .detail .location{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+    margin-top: 4px;
+}
+.filter_mobile{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #1d1d1d9f;
+    min-height: 100vh;
+    width: 100vw;
+    transition: .2s ease-in-out;
+    left: -120%;
+}
+.filter_mobile .covers{
+    padding: 40px 24px;
+    background-color: white;
+    height: 100vh;
+    width: 50vw;
+    min-width: 356px;
+    border-top-right-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.filter_mobile .covers .topSide{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #1d1d1d11;
+}
+.filter_mobile .covers .topSide button{
+    background-color: transparent;
+}
+.filter_mobile .covers .bodySide{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.filter_mobile .covers .bodySide .boxFilter{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #1d1d1d11;
+    gap: 4px;
+}
+.filter_mobile .covers .bodySide .boxPrice{
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #1d1d1d11;
+}
+.filter_mobile .covers .topSide img{
+    height: 16px;
+}
+
+.filter_mobile .covers .bodySide .boxPrice{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.filter_mobile .covers .bodySide .boxPrice p.overpass{
+    margin-bottom: 4px;
+}
+.filter_mobile .covers .bodySide .boxPrice span{
+    width: 100%;
+    background-color: #1d1d1d10;
+    margin-bottom: 16px;
+}
+.filter_mobile .covers .bodySide .boxPrice .cover{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: ease-in-out .4s;
+}
+.filter_mobile .covers .bodySide .boxPrice .cover img{
+    transition: .4s ease-in-out;
+}
+.filter_mobile .covers .bodySide .boxPrice:hover .slider-container{
+    opacity: 1;
+    top: 0px;
+}
+.filter_mobile .covers .bodySide .boxPrice:hover .cover img{
+    transform: rotate(-90deg);
+}
+
+.filter_mobile .covers .bodySide .boxPrice .slider-container {
+    position: relative;
+    width: 100%;
+    opacity: 1;
+    transition: .4s ease-in-out;
+}
+
+.filter_mobile .covers .bodySide .boxPrice input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    background: transparent;
+    position: absolute;
+}
+
+.filter_mobile .covers .bodySide .boxPrice input[type="range"]::-webkit-slider-runnable-track {
+    height: 6px;
+    background: #ddd;
+    border-radius: 3px;
+}
+
+.filter_mobile .covers .bodySide .boxPrice input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #1d1d1d;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    top: -5px;
+}
+
+.filter_mobile .covers .bodySide .boxPrice input[type="range"]:nth-child(2)::-webkit-slider-thumb {
+    z-index: 2;
+}
+
+.filter_mobile .covers .bodySide .boxPrice input[type="range"]:focus {
+    outline: none;
+}
+
+@media screen and (max-width : 1291px) {
+    .content .container{
+        gap: 24px;
+    }
+    .content .container .rightSide .boxCard .card{
+        position: relative;
+    }
+    .content .container .rightSide .boxCard .card .detail .price p.disc{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    .content .container .rightSide .boxCard .card .detail p.normalFont.normalSize.black{
+        max-height: 60px;
+        overflow: hidden;
+    }
+}
+@media screen and (max-width : 1024px) {
+    .content .container .leftSide{
+        min-width: 200px;
+    }
+    .content .container .rightSide .boxCard .card .detail .price p.strike{
+        display: none;
+    }
+}
+@media screen and (max-width : 900px) {
+    .content .container .leftSide{
+        display: none;
+    }
+    .content .container .rightSide .coverTop .rightTop{
+        display: flex;
+    }
+}
+@media screen and (max-width : 656px) {
+    .content .container .rightSide .boxCard .card{
+        width: calc(100% / 2 - 6px);
+    }
+}
+@media screen and (max-width : 562px) {
+    .content .container .rightSide .filter{
+        display: flex;
+    }
+    nav .searchNav .filter{
+        display: none;
+    }
+    .content .container .rightSide .coverTop{
+        margin-top: 24px;
+    }
+}
+@media screen and (max-width : 398px) {
+    .content .container .rightSide .boxCard .card{
+        width: calc(100%);
+    }
+}
+/* CONTENT */

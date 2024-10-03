@@ -1,0 +1,390 @@
+nav{
+    background-color: white;
+    max-width: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+nav .container{
+    max-width: 1440px;
+    width: 100%;
+}
+nav .searchNav{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.094);
+    gap: 20px;
+    position: relative;
+    background-color: white;
+}
+nav .searchNav .boxInput{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+nav .searchNav .boxInput{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border: 1px solid #ebedec;
+    padding: 4px;
+    border-radius: 100px;
+    gap: 32px;
+    background-color: white;
+}
+nav .searchNav .boxInput input{
+    background-color: transparent;
+    padding-left: 40px;
+    background-image: url(../svgs/search.svg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 8px;
+    font-family: MontserratMedium;
+    outline: none;
+    height: 40px;
+    width: 100%;
+}
+nav .searchNav .boxInput button{
+    border-radius: 100px;
+    background-color: #1d1d1d;
+    padding: 0px 24px;
+}
+nav .searchNav .filter{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+}
+nav .searchNav .filter .dropdown{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 24px;
+    border-radius: 100px;
+    border: 1px solid #1d1d1d6e;
+    background-color: transparent;
+    gap: 12px;
+}
+nav .searchNav .filter .dropdown img{
+    transition: .2s ease-in-out;
+}
+nav .searchNav .filter .dropdown p{
+    white-space: nowrap;
+}
+.dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    width: 100%;
+    border-radius: 8px;
+  }
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #f0f0f0;
+  }
+  .filter:hover button img{
+    transform: rotate(-90deg);
+  }
+  .filter:hover .dropdown-menu {
+    display: block; 
+  }
+
+/* content */
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+}
+.content .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    gap: 24px;
+}
+.content .container .leftSide{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.content .container .leftSide .promotion{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 16px;
+    background-image: url(../imgs/destinationSearch_promotion.png);
+    background-position: center;
+    background-size: cover;
+    gap: 24px;
+    width: 264px;
+    height: 364px;
+    position: relative;
+}
+.content .container .leftSide .promotion::before{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #1d1d1d;
+    top: 0;
+    left: 0;
+    content: "";
+    border-radius: 16px;
+    opacity: .55;
+    z-index: 1;
+}
+.content .container .leftSide .promotion p{
+    position: relative;
+    z-index: 2;
+}
+.content .container .leftSide .promotion a{
+    position: relative;
+    z-index: 2;
+}
+.content .container .rightSide{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+.content .container .rightSide h1{
+    font-size: 32px;
+}
+.content .container .rightSide .filter{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    margin-top: 12px;
+    display: none;
+}
+.content .container .rightSide .filter:hover .dropdown-menu{
+    display: block;
+}
+.content .container .rightSide .filter:hover button img{
+    transform: rotate(-90deg);
+}
+.content .container .rightSide .filter .dropdown{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 24px;
+    border-radius: 100px;
+    border: 1px solid #1d1d1d6e;
+    background-color: transparent;
+    gap: 12px;
+}
+.content .container .rightSide .filter .dropdown-menu{
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    width: 100%;
+    border-radius: 8px;
+}
+.content .container .rightSide .filter .dropdown-menu a{
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+.content .container .rightSide h1.other{
+    margin-top: 40px;
+}
+.content .container .rightSide .boxDestinations{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 24px;
+    gap: 12px;
+}
+.content .container .rightSide .boxDestinations .card{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 24px;
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    height: auto;
+    height: 264px;
+    cursor: pointer;
+    transition: .4s ease;
+}
+.content .container .rightSide .boxDestinations .card:hover{
+    box-shadow: 0px 0px 16px #1d1d1d39;
+}
+.content .container .rightSide .boxDestinations .card .image{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    min-width: 271px;
+    background-size: cover;
+    background-position: center;
+    transition: .4s ease-in-out;
+}
+.content .container .rightSide .boxDestinations .card:hover .image{
+    min-width: 100px;
+    width: auto;
+}
+.content .container .rightSide .boxDestinations .card .image .like{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+}
+.content .container .rightSide .boxDestinations .card .image .like:hover{
+    box-shadow: 1px 1px 20px #1d1d1d35;
+    transform: scale(1.04);
+}
+.content .container .rightSide .boxDestinations .card .detail{
+    display: flex;
+    flex-direction: column;
+    border: 28px solid white;
+    overflow: hidden;
+    padding-left: 0;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+.content .container .rightSide .boxDestinations .card .detail .type{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    right: 24px;
+}
+.content .container .rightSide .boxDestinations .card .detail .type p{
+    border: 1px solid #1d1d1d42;
+    padding: 2px 16px;
+    border-radius: 100px;
+}
+.content .container .rightSide .boxDestinations .card .detail .explain{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 8px;
+}
+.content .container .rightSide .boxDestinations .card .detail .explain .overpass{
+    font-size: 24px;
+}
+.content .container .rightSide .boxDestinations .card .detail .explain .u{
+    text-decoration: underline;
+}
+.content .container .rightSide .actionView{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    margin-top: 40px;
+}
+.content .container .rightSide .actionView button{
+    padding: 8px 32px;
+    background-color: white;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+}
+.content .container .rightSide .more{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-right: 8px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+.content .container .rightSide .more p:hover{
+    text-decoration: underline;
+}
+.content .container .rightSide .actionView button:hover{
+    box-shadow: 0px 0px 12px #1d1d1d56;
+}
+@media screen and (max-width : 1024px) {
+    .content .container .leftSide{
+        display: none;
+    }
+}
+@media screen and (max-width : 769px) {
+    .content .container .rightSide h1{
+        font-size: 28px;
+        margin: 12px 0;
+    }
+    .content .container .rightSide .boxDestinations .card{
+        gap: 8px;
+    }
+    .content .container .rightSide .boxDestinations .card .detail .explain .overpass{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width : 654px) {
+    .content .container .rightSide .boxDestinations .card .image{
+        min-width: 120px;
+    }
+}
+@media screen and (max-width : 562px) {
+    .content .container .rightSide h1{
+        margin-top: 32px;
+        font-size: 20px;
+    }
+    .content .container .rightSide .boxDestinations .card{
+        height: 218px;
+    }
+    .content .container .rightSide .boxDestinations .card .image{
+        min-width: 120px;
+    }
+    .content .container .rightSide .boxDestinations .card .detail{
+        border: 16px solid white;
+    }
+    .content .container .rightSide .boxDestinations .card .detail .type{
+        position: relative;
+        right: 0px;
+        justify-content: flex-start;
+    }
+    .content .container .rightSide .filter{
+        display: flex;
+    }
+    nav .searchNav .filter{
+        display: none;
+    }
+}
+/* content */

@@ -1,0 +1,911 @@
+/* start hero */
+.hero{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 1440px;
+}
+.hero .container{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: stretch;
+    position: relative;
+}
+.hero .container .text-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 24px;
+    position: relative;
+    flex: 1;
+    margin-top: calc(25vh - 102px);
+}
+.hero .container .text-side h1{
+    display: inline-block;
+}
+.hero .container .text-side h1 span.outside{
+    display: inline-flex;
+    height: 48px;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 100px;
+    padding: 3px;
+    border: 1px solid #B0BDB4;
+}
+.hero .container .text-side h1 span.outside span.inside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    border-radius: 100px;
+    overflow: hidden;
+    position: relative;
+}
+.hero .container .text-side h1 span.outside span.inside .main{
+    position: relative;
+}
+.hero .container .text-side h1 span.outside span.inside .sec{
+    position: absolute;
+}
+.hero .container .text-side .boxInput{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border: 1px solid #B0BDB4;
+    padding: 4px;
+    border-radius: 100px;
+    gap: 32px;
+}
+.hero .container .text-side .boxInput input{
+    background-color: transparent;
+    padding-left: 40px;
+    background-image: url(../svgs/search.svg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 8px;
+    font-family: MontserratMedium;
+    outline: none;
+    height: 40px;
+    width: 100%;
+}
+.hero .container .text-side .boxInput button{
+    border-radius: 100px;
+    background-color: #1d1d1d;
+    padding: 0px 24px;
+}
+
+.hero .container .img-side{
+    display: flex;
+    flex: 1;
+    border-radius: 16px;
+    background-image: url(../imgs/homepage_heroimg.png);
+    height: calc(100vh - 166px);
+    max-height: 892px;
+    min-height: 776px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 24px;
+}
+.hero .container .img-side .testimonial-hero{
+    display: flex;
+    width: 95%;
+    background-color: white;
+    border-radius: 24px;
+    overflow: hidden;
+    padding: 24px;
+    justify-content: center;
+    align-items: stretch;
+    height: fit-content;
+    gap: 32px;
+}
+.hero .container .img-side .testimonial-hero .image-inner-side{
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    border-radius: 16px;
+    background-image: url(../imgs/homepage_heroimg.png);
+    background-size: cover;
+    background-position: center;
+}
+.hero .container .img-side .testimonial-hero .text-inner-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    flex: 2;
+}
+.hero .container .img-side .testimonial-hero .text-inner-side p.italic{
+    font-style: italic;
+}
+.hero .container .img-side .testimonial-hero .text-inner-side span.border{
+    width: 100%;
+    height: 1px;
+    background-color: #1d1d1d;
+    opacity: .15;
+}
+.hero .container .img-side .testimonial-hero .text-inner-side .profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+.hero .container .img-side .testimonial-hero .text-inner-side .profile img{
+    height: 48px;
+}
+.hero .container .badage-extra{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+.hero .container .badage-extra img{
+    height: 64px;
+}
+@media screen and (max-width : 1280px ){
+    .hero .container .img-side .testimonial-hero{
+        flex-direction: column;
+    }
+    .hero .container .img-side .testimonial-hero .image-inner-side{
+        display: none;
+    }
+}
+@media screen and (max-width : 1024px) {
+    .hero{
+        width: 100%;
+        min-height: calc(100vh - 166px);
+        
+    }
+    .hero .container{
+        width: 100%;
+        position: relative;
+        /* min-height: calc(100vh - 166px);
+        background-image: url(../imgs/homepage_heroimg.png); */
+    }
+    .hero .container .img-side{
+        display: none;
+    }
+    .hero .container .text-side{
+        width: 100%;
+        height: calc(100vh - 166px);
+        min-height: 880px;
+        margin-top: 0;
+        border-radius: 24px;
+        padding: 32px;
+        justify-content: center;
+        background-image: url(../imgs/homepage_heroimg.png);
+        position: relative;
+    }
+    .hero .container .text-side::before{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        background-color: #1d1d1d;
+        border-radius: 32px;
+        opacity: .45;
+    }
+    .hero .container .text-side h1{
+        color: white;
+        z-index: 2;
+    }
+    .hero .container .text-side p{
+        color: white;
+    }
+    .hero .container .text-side .boxInput{
+        z-index: 2;
+        background-color: white;
+    }
+    .hero .container .badage-extra{
+        bottom: 32px;
+        left: 96px;
+    }
+    .hero .container .badage-extra .text p,
+    .hero .container .badage-extra .text span{
+        color: white;
+    }
+}
+@media screen and (max-width : 562px) {
+    .hero .container{
+        padding: 0;
+        border-radius: 0px;
+    }
+    .hero .container .text-side{
+        border-radius: 0;
+    }
+    .hero .container .badage-extra {
+        left: 32px;
+    }
+}
+@media screen and (max-width : 769px) {
+    .hero .container .badage-extra{
+        left: 56px;
+    }
+}
+@media screen and (max-width : 562px) {
+    .hero .container .badage-extra{
+        left: 32px;
+    }
+}
+/* end hero */
+/* start moving text */
+
+.moving-text{
+    max-width: 1440px;
+    width: 100%;
+    margin: 52px 0;
+    background: linear-gradient(to top right, #F7ECE2, #C6E0DA);
+    padding: 24px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+.moving-text span{
+    position: absolute;
+    width: 64px;
+    height: 100%;
+}
+.moving-text span.leftMargin{
+    left: 0;
+    background: linear-gradient(to right, #FBF7F3, transparent);
+}
+.moving-text span.rightMargin{
+    right: 0;
+    background: linear-gradient(to left, #FBF7F3, transparent);
+}
+.moving-text img{
+    position: relative;
+    left: 0%;
+    animation-name: moving;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    transition: linear;
+}
+@keyframes moving {
+    0%{
+        left: 0%;
+    }
+    100%{
+        left: -100%;
+    }
+}
+@media screen and (max-width : 1024px) {
+    .moving-text{
+        padding: 16px 0;
+    }
+    .moving-text img{
+        height: 24px;
+    }
+    .moving-text span.rightMargin,
+    .moving-text span.leftMargin{
+        display: none;
+    }
+}
+@media screen and (max-width : 562px) {
+    .moving-text{
+        margin-top: 0;
+    }
+}
+/* end moving text */
+/* introduction */
+.introduction{
+    display: flex;
+    margin-top: 140px;
+    width: 100%;
+    max-width: 1440px;
+    position: relative;
+}
+.introduction .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+}
+.introduction .container .text-side{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.introduction .container .text-side .left-side{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+.introduction .container .text-side .left-side p{
+    text-align: right;
+    width: 50%;
+}
+.introduction .container .text-side .left-side button{
+    border-radius: 100px;
+    width: 86px;
+    aspect-ratio: 1;
+    pad: 32px;
+}
+.introduction .container .cardSide{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 553px;
+    width: 100%;
+    max-width: 1440px;
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+.introduction .container .cardSide::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+.introduction .container .cardSide a{
+    height: 100%;
+    overflow: hidden;
+    border-radius: 32px;
+    min-width: 408px;
+}
+.introduction .container .cardSide a .card{
+    height: 100%;
+    min-width: 408px;
+}
+.introduction .container .cardSide a .card .imageCard{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 12px;
+    border-radius: 32px;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    transition: .4s ease-in-out;
+}
+.introduction .container .cardSide a .card .imageCard .locationGo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 100px;
+    padding: 8px 16px;
+    background-color: white;
+}
+.introduction .container .cardSide a .card .imageCard .locationGo img{
+    height: 24px;
+}
+.introduction .container .cardSide a .card .detailCard{
+    transition: .4s ease-in-out;
+}
+.introduction .container .cardSide a:hover .card .imageCard{
+    height: 408px;
+    margin-bottom: 16px;
+}
+.introduction .container .cardSide a:hover .card .detailCard{
+    padding: 0 12px;
+}
+@media screen and (max-width : 756px) {
+    .introduction .container .text-side{
+        flex-direction: column;
+        gap: 20px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .introduction .container .text-side .left-side{
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .introduction .container .text-side .left-side p{
+        text-align: left;
+        width: 70%;
+    }
+    .introduction .container .text-side .left-side button{
+        display: none;
+    }
+    .introduction{
+        margin-top: 40px;
+    }
+    .introduction .container .cardSide a{
+        min-width: 328px;
+    }
+}
+@media screen and (max-width : 562px) {
+    .introduction .container .cardSide a{
+        min-width: 90%;
+    }
+    .introduction .container .cardSide{
+        height: 400px;
+    }
+}
+/* introduction */
+/* booking */
+.book{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    margin-top: 140px;
+}
+.book .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 40px;
+}
+.book .container .textSide{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 24px;
+    flex: 1;
+}
+.book .container .textSide .tag{
+    padding: 8px 16px;
+    border-radius: 100px;
+}
+.book .container .textSide .boxAction{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+.book .container .textSide .boxAction button{
+    padding: 12px 28px;
+    border-radius: 100px;
+    transition: .4s ease-in-out;
+    margin-top: 12px;
+}
+.book .container .textSide .boxAction button.main{
+    background-color: #1d1d1d;
+}
+.book .container .vidSide{
+    display: flex;
+    flex: 1;
+    background-image: url(../imgs/homepage_vid.png);
+    background-position: center;
+    background-size: cover;
+    padding: 24px;
+    border-radius: 24px;
+
+}
+@media screen and (max-width : 900px) {
+    .book .container{
+        flex-direction: column;
+    }
+    .book .container .vidSide{
+        aspect-ratio: 4 / 3;
+    }
+}
+/* booking */
+/* promotion */
+.promotion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    margin-top: 140px;
+}
+.promotion .container{
+    width: 100%;
+    max-width: 1440px;
+}
+.promotion .container .content{
+    padding: 40px;
+    border-radius: 32px;
+    display: flex;
+    gap: 64px;
+    flex-direction: row;
+}
+.promotion .container .content .leftSide{
+    display: flex;
+    flex : 2;
+    flex-direction: column;
+    gap: 24px;
+}
+.promotion .container .content .leftSide .tag{
+    padding: 8px 16px;
+    border: 1px solid #1d1d1d;
+    width: fit-content;
+    border-radius: 100px;
+}
+.promotion .container .content .leftSide .coverPromotion{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 32px;
+    margin-top: 16px;
+}
+.promotion .container .content .leftSide .coverPromotion .itemPromotion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 52px;
+}
+.promotion .container .content .leftSide .coverPromotion .itemPromotion .detailPromotion{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 24px;
+}
+.promotion .container .content .leftSide .coverPromotion .itemPromotion .detailPromotion img{
+    height: 40px;
+}
+.promotion .container .content .leftSide .coverPromotion .itemPromotion .detailPromotion .textPromotion{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12px;
+}
+.promotion .container .rightSide{
+    display: flex;
+    flex: 3;
+    background-image: url(../imgs/homepage_promotion.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    position: relative;
+    padding: 24px;
+}
+.promotion .container .rightSide .locationGo{
+    position: absolute;
+    top: 24px;
+}
+.promotion .container .rightSide .testimonialPromotion{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: white;
+    height: fit-content;
+    padding: 16px;
+    border-radius: 12px;
+    gap: 12px;
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    width: 50%;
+    min-width: 280px;
+}
+.promotion .container .rightSide .testimonialPromotion p.italic{
+    font-style: italic;
+}
+.promotion .container .rightSide .testimonialPromotion span.border{
+    width: 100%;
+    height: 2px;
+    background-color: #1d1d1d;
+    opacity: .15;
+}
+.promotion .container .rightSide .testimonialPromotion .profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+.promotion .container .rightSide .testimonialPromotion .profile img{
+    height: 52px;
+}
+@media screen and (max-width : 1024px) {
+    .promotion .container .content{
+        flex-direction: column;
+    }
+    .promotion .container .rightSide{
+        padding: 40px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 40vh;
+    }
+    .promotion .container .rightSide .testimonialPromotion,
+    .promotion .container .rightSide .locationGo{
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+}
+@media screen and (max-width : 768px) {
+    .promotion .container .content .leftSide .coverPromotion .itemPromotion{
+        gap: 0;
+    }
+    .promotion .container .content {
+        padding: 28px;
+    }
+}
+@media screen and (max-width : 482px) {
+    .promotion .container .rightSide .testimonialPromotion{
+        min-width: unset;
+        width: 100%;
+    }
+}
+/* promotion */
+/* reason */
+.reason{
+    margin-top: 140px;
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reason .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+.reason .container .topSide{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15%;
+}
+.reason .container .topSide .leftSide{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.reason .container .topSide .leftSide .tag{
+    width: fit-content;
+    padding: 8px 24px;
+    border-radius: 100px;
+}
+.reason .container .topSide .rightSide{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.reason .container .topSide .rightSide .boxAction{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+.reason .container .topSide .rightSide .boxAction button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 28px;
+    border-radius: 100px;
+}
+.reason .container .topSide .rightSide .boxAction button.main{
+    background-color: #1d1d1d;
+}
+.reason .container .topSide .rightSide .boxAction button.sec{
+    background-color: transparent;
+    border: 1px solid #ECECEC;
+}
+.reason .container .bottomSide{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: stretch;
+    gap: 16px;
+    margin-top: 40px;
+}
+.reason .container .bottomSide .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+    flex: 1;
+}
+.reason .container .bottomSide .card .extra{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+}
+.reason .container .bottomSide .card .extra img{
+    height: 20px;
+}
+@media screen and (max-width : 1096px) {
+    .reason .container .topSide{
+        gap: 32px;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .reason .container .topSide .rightSide{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
+    .reason .container .topSide .rightSide .boxAction button.sec{
+        display: none;
+    }
+    .reason .container .topSide .rightSide .boxAction button.main{
+        white-space: nowrap;
+    }
+}
+@media screen and (max-width : 768px) {
+    .reason .container .bottomSide{
+        flex-wrap: wrap;
+    }
+    .reason .container .bottomSide .card{
+        min-width: calc(100% / 2 - 8px);
+    }
+}
+@media screen and (max-width : 501px) {
+    .reason .container .topSide .rightSide{
+        flex-direction: column;
+    }
+}
+/* reason */
+/* testimonial */
+.testimonial{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 1440px;
+    margin-top: 140px;
+}
+.testimonial .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 40px;
+}
+.testimonial .container .leftSide{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+    border-radius: 24px;
+    background-image: url(../imgs/homepage_testimonial_1.png);
+    background-size: cover;
+    background-position: center;
+    flex: 4;
+}
+.testimonial .container .leftSide .locationGo{
+    width: fit-content;
+}
+.testimonial .container .leftSide .boxTestimonial{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: white;
+    padding: 24px;
+    gap: 24px;
+    border-radius: 16px;
+}
+.testimonial .container .leftSide .boxTestimonial .profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+.testimonial .container .leftSide .boxTestimonial .profile p{
+    white-space: nowrap;
+}
+.testimonial .container .leftSide .boxTestimonial .profile img{
+    height: 48px;
+}
+.testimonial .container .leftSide .boxTestimonial span.border{
+    height: 100%;
+    width: 2px;
+    background-color: #1d1d1d;
+    opacity: .15;
+}
+.testimonial .container .leftSide .boxTestimonial .detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+    gap: 8px;
+}
+.testimonial .container .leftSide .boxTestimonial .detail .italic{
+    font-style: italic;
+}
+.testimonial .container .rightSide{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex: 3;
+}
+.testimonial .container .rightSide .tag{
+    padding: 8px 24px;
+    border-radius: 100px;
+    width: fit-content;
+}
+.testimonial .container .rightSide .navigationTestimonial{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 8px;
+}
+.testimonial .container .rightSide .navigationTestimonial button{
+    width: 56px;
+    border-radius: 100px;
+    aspect-ratio: 1;
+    cursor: pointer;
+}
+@media screen and (max-width : 1024px) {
+    .testimonial .container .leftSide .boxTestimonial{
+        flex-direction: column;
+    }
+    .testimonial .container .leftSide .boxTestimonial .detail{
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .testimonial .container .leftSide .boxTestimonial span.border{
+        width: 100%;
+        height: 2px;
+    }
+    .testimonial .container .leftSide .boxTestimonial .profile{
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+}
+@media screen and (max-width : 769px) {
+    .testimonial .container{
+        flex-direction: column-reverse;
+    }
+    .testimonial .container .leftSide{
+        gap: 40vh;
+    }
+    .testimonial .container .rightSide .navigationTestimonial button{
+        width: 40px;
+        aspect-ratio: 1;
+    }
+    .testimonial .container .rightSide .navigationTestimonial button img{
+        width: 32px;
+    }
+}
+/* testimonial */
+
+
+
+
+

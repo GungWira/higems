@@ -1,0 +1,852 @@
+nav{
+    position: absolute;
+    top: 0;
+    max-width: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+nav.fixNav{
+    position: absolute !important;
+    background-color: transparent;
+    top: 0;
+}
+nav.fixNav .container .navigation-side .item-nav a,
+nav.fixNav .container .mobile-nav .boxInput input,
+nav.fixNav .container .mobile-nav a p{
+    color: white;
+}
+nav.fixNav .container .mobile-nav .boxInput input{
+    background-image: url(../svgs/search_white.svg);
+}
+nav.fixNav .container .extra-side .signs,
+nav.fixNav .container .mobile-nav .boxInput button{
+    background-color: transparent;
+}
+nav.scrollNav{
+    top: -150px;
+    transition: .4s ease-in-out;
+    background-color: white;
+    position: fixed;
+}
+nav.fixNav .container .logo-side a p{
+    color: white;
+}
+nav.fixNav .container .extra-side .options p{
+    color: white;
+}
+nav.fixNav .container .extra-side .options span{
+    background-color: white;
+}
+nav .container{
+    max-width: 1440px;
+    width: 100%;
+}
+nav .container .mobile-nav{
+    display: flex;
+}
+nav .container .mobile-nav input{
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* HERO */
+.hero{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../imgs/destinationDetail_hero_1.png);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    --hero-before-op : 0.2;
+}
+.hero::before{
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: #1d1d1d;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: var(--hero-before-op);
+}
+.hero .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1440px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    gap: 40px;
+    padding-bottom: 64px;
+}
+.hero .container .topSide{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-top: 10%;
+}
+.hero .container .topSide .leftSide,
+.hero .container .topSide .rightSide{
+    display: flex;
+    flex: 1.5;
+}
+.hero .container .topSide .rightSide{
+    justify-content: flex-end;
+}
+.hero .container .topSide .navigasi{
+    border-radius: 100px;
+    width: 64px;
+    aspect-ratio: 1;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    opacity: .7;
+    transition: .4s ease-in-out;
+}
+.hero .container .topSide .navigasi:hover{
+    opacity: 1;
+}
+.hero .container .topSide .midSide{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex: 5;
+    text-align: center;
+}
+.hero .container .topSide .midSide h1{
+    font-size: 100px;
+}
+.hero .container .topSide .midSide p.normalSize{
+    width: 50%;
+}
+.hero .container .bottomSide{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    gap: 40px;
+}
+.hero .container .bottomSide .sosmed img{
+    height: 40px;
+}
+.hero .container .bottomSide .navigasiProg{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+.hero .container .bottomSide .navigasiProg .prog{
+    height: 8px;
+    width: 40px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+}
+.hero .container .bottomSide .navigasiProg .prog.fill{
+    background-color: white;
+}
+.hero .container .bottomSide .navigasiProg .prog:hover{
+    background-color: white;
+}
+@media screen and (max-width : 1024px) {
+    .hero .container .topSide .midSide h1{
+        font-size: 72px;
+    }
+    .hero .container .topSide .midSide p.normalSize{
+        width: 70%;
+    }
+}
+@media screen and (max-width : 856px) {
+    .hero .container .topSide .leftSide, .hero .container .topSide .rightSide{
+        display: none;
+    }
+    .hero .container{
+        height: 100vh;
+        justify-content: center;
+    }
+    .hero .container .topSide{
+        margin-top: unset;
+        padding-top: unset;
+        justify-self: center;
+        align-self: center;
+    }
+    .hero .container .bottomSide{
+        position: absolute;
+        bottom: 64px;
+    }
+}
+@media screen and (max-width : 562px) {
+    .hero .container .topSide .midSide h1{
+        font-size: 48px;
+    }
+    .hero .container .bottomSide .sosmed img{
+        height: 32px;
+    }
+    .hero .container .bottomSide .navigasiProg .prog{
+        width: 32px;
+    }
+}
+/* HERO */
+/* INTRODUCTON */
+.introduction{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    margin-top: 140px;
+}
+.introduction .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 40px;
+}
+.introduction .container .textSide{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 24px;
+    flex: 1;
+}
+.introduction .container .textSide .tag{
+    padding: 8px 16px;
+    border-radius: 100px;
+}
+.introduction .container .textSide .boxAction{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+.introduction .container .textSide .boxAction button{
+    padding: 12px 28px;
+    border-radius: 100px;
+    transition: .4s ease-in-out;
+    margin-top: 12px;
+}
+.introduction .container .textSide .boxAction button.main{
+    background-color: #1d1d1d;
+}
+.introduction .container .vidSide{
+    display: flex;
+    flex: 1;
+    background-image: url(../imgs/destination_detail_area_introduction.png);
+    background-position: center;
+    background-size: cover;
+    padding: 24px;
+    border-radius: 24px;
+
+}
+@media screen and (max-width : 900px) {
+    .introduction .container{
+        flex-direction: column;
+    }
+    .introduction .container .vidSide{
+        aspect-ratio: 4 / 3;
+    }
+}
+/* INTRODUCTON */
+/* ABOUT */
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 140px;
+    width: 100%;
+    max-width: 1440px;
+}
+.about .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+.about .container .topSide{
+    width: 580px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+}
+.about .container .midSide{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+.about .container .midSide .leftSide{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    left: -100%;
+    transition: .4s ease-in-out;
+    flex: 1;
+    gap: 16px;
+}
+.about .container .midSide .leftSide .boxLocation{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.about .container .midSide .leftSide .boxLocation button{
+    padding: 4px 20px;
+    border-radius: 100px;
+    background-color: transparent;
+    border: 1px solid #1d1d1d2e;
+}
+.about .container .midSide .rightSide{
+    display: flex;
+    flex: 2;
+    position: relative;
+    transition: .4s ease-in-out;
+    left: -15%;
+}
+.about .container .midSide .rightSide svg{
+    width: 100%;
+}
+.about .container .midSide .rightSide svg path.f,
+.about .container .midSide .rightSide svg g path{
+    transition: .4s ease-in-out;
+    cursor: pointer;
+}
+.about .container .midSide .rightSide svg path.f:hover,
+.about .container .midSide .rightSide svg g:hover path{
+    fill: #B4C0B7;
+    transition: .4s ease-in-out;
+}
+.about .container .midSide.active .leftSide{
+    left: 0%;
+}
+.about .container .midSide.active .rightSide{
+    left: 0%;
+}
+.about .container .bottomSide{
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+}
+.about .container .bottomSide button{
+    background-color: transparent;
+    cursor: pointer;
+}
+.about .container .bottomSide button:hover{
+    text-decoration: underline;
+    opacity: 1;
+}
+#tooltip{
+    position: absolute;
+    background-color: white;
+    padding: 12px;
+    border-radius: 8px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12px;
+    display: none;
+}
+@media screen and (max-width : 1024px) {
+    .about .container .midSide{
+        flex-direction: column-reverse;
+    }
+    .about .container .midSide .rightSide{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .about .container .midSide .rightSide svg{
+        width: 80vw;
+    }
+    .about .container .bottomSide{
+        flex-wrap: wrap;
+    }
+    .about .container .midSide .rightSide{
+        left: 0;
+    }
+    #tooltip{
+        display: none !important;
+    }
+}
+@media screen and (max-width : 664px) {
+    .about .container .topSide{
+        width: 90vw;
+    }
+    .about .container .bottomSide{
+        gap: 16px;
+    }
+}
+/* ABOUT */
+/* PICTURE */
+.picture{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    margin-top: 140px;
+}
+.picture .container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 40px;
+}
+.picture .container .bottomSide{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.picture .container .bottomSide .grid-gallery{
+    display: flex;
+    overflow: scroll;
+    gap: 16px;
+}
+.picture .container .bottomSide .grid-gallery::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+.picture .container .bottomSide .grid-gallery a{
+    min-width: 60%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.picture .container .bottomSide .grid-gallery a img{
+    width: 100%;
+    height: 100%;
+}
+@media screen and (max-width : 562px) {
+    .picture .container .bottomSide .grid-gallery a{
+        min-width: 90%;
+    }
+}
+/* PICTURE */
+/* THINGS */
+.things{
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 140px;
+}
+.things .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+.things .container .boxThings{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+    overflow: h;
+}
+.things .container .boxThings .cover{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: scroll;
+    gap: 12px;
+}
+.things .container .boxThings .cover::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+.things .container .boxThings .cover .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-width: 320px;
+    cursor: pointer;
+}
+.things .container .boxThings .cover .card .image{
+    display: flex;
+    padding: 24px;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 24px;
+    flex-direction: column;
+    justify-content: space-between;
+    background-position: center;
+    background-size: cover;
+    align-items: flex-start;
+    transition: .4s ease-in-out;
+}
+.things .container .boxThings .cover .card .image .likeCover{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.things .container .boxThings .cover .card .image .likeCover button{
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 100px;
+}
+.things .container .boxThings .cover .card .image .likeCover button:hover{
+    box-shadow: 0px 0px 12px #1d1d1d67;
+}
+.things .container .boxThings .cover .card .detail{
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    transition: .4s ease-in-out;
+}
+.things .container .boxThings .cover .card:hover .image{
+    box-shadow: 0px 0px 12px #1d1d1d7f;
+}
+.things .container .boxThings .cover .card:hover .detail{
+    padding-top: 8px;
+}
+@media screen and (max-width : 652px) {
+    .things .container .boxThings .cover .card{
+        min-width: 280px;
+    }
+}
+/* THINGS */
+/* promotion */
+.promotion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    margin-top: 140px;
+}
+.promotion .container{
+    width: 100%;
+    max-width: 1440px;
+}
+.promotion .container .content{
+    padding: 40px;
+    border-radius: 32px;
+    display: flex;
+    gap: 64px;
+    flex-direction: row;
+}
+.promotion .container .content .leftSide{
+    display: flex;
+    flex : 2;
+    flex-direction: column;
+    gap: 24px;
+}
+.promotion .container .content .leftSide .tag{
+    padding: 8px 16px;
+    border: 1px solid #1d1d1d;
+    width: fit-content;
+    border-radius: 100px;
+}
+.promotion .container .content .leftSide .coverPromotion{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 32px;
+    margin-top: 16px;
+}
+.promotion .container .content .leftSide .coverPromotion .itemPromotion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 52px;
+}
+.promotion .container .content .leftSide .coverPromotion .itemPromotion .detailPromotion{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 24px;
+}
+.promotion .container .content .leftSide .coverPromotion .itemPromotion .detailPromotion img{
+    height: 40px;
+}
+.promotion .container .content .leftSide .coverPromotion .itemPromotion .detailPromotion .textPromotion{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12px;
+}
+.promotion .container .rightSide{
+    display: flex;
+    flex: 3;
+    background-image: url(../imgs/destinationDetail_promotion.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    position: relative;
+    padding: 24px;
+}
+.promotion .container .rightSide .locationGo{
+    position: absolute;
+    top: 24px;
+}
+.promotion .container .rightSide .testimonialPromotion{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: white;
+    height: fit-content;
+    padding: 16px;
+    border-radius: 12px;
+    gap: 12px;
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    width: 50%;
+    min-width: 280px;
+}
+.promotion .container .rightSide .testimonialPromotion p.italic{
+    font-style: italic;
+}
+.promotion .container .rightSide .testimonialPromotion span.border{
+    width: 100%;
+    height: 2px;
+    background-color: #1d1d1d;
+    opacity: .15;
+}
+.promotion .container .rightSide .testimonialPromotion .profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+.promotion .container .rightSide .testimonialPromotion .profile img{
+    height: 52px;
+}
+@media screen and (max-width : 1024px) {
+    .promotion .container .content{
+        flex-direction: column;
+    }
+    .promotion .container .rightSide{
+        padding: 40px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 40vh;
+    }
+    .promotion .container .rightSide .testimonialPromotion,
+    .promotion .container .rightSide .locationGo{
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+}
+@media screen and (max-width : 768px) {
+    .promotion .container .content .leftSide .coverPromotion .itemPromotion{
+        gap: 0;
+    }
+    .promotion .container .content {
+        padding: 28px;
+    }
+}
+@media screen and (max-width : 482px) {
+    .promotion .container .rightSide .testimonialPromotion{
+        min-width: unset;
+        width: 100%;
+    }
+}
+/* promotion */
+/* booking */
+.book{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    margin-top: 140px;
+}
+.book .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 40px;
+}
+.book .container .textSide{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 24px;
+    flex: 3;
+}
+.book .container .textSide .tag{
+    padding: 8px 16px;
+    border-radius: 100px;
+}
+.book .container .textSide .boxAction{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+.book .container .textSide .boxAction button{
+    padding: 12px 28px;
+    border-radius: 100px;
+    transition: .4s ease-in-out;
+    margin-top: 12px;
+}
+.book .container .textSide .boxAction button.main{
+    background-color: #1d1d1d;
+}
+.book .container .testiSide{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+    border-radius: 24px;
+    background-image: url(../imgs/destinationDetail_booking.png);
+    background-size: cover;
+    background-position: center;
+    flex: 4;
+}
+.book .container .testiSide .locationGo{
+    width: fit-content;
+}
+.book .container .testiSide .boxTestimonial{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: white;
+    padding: 24px;
+    gap: 24px;
+    border-radius: 16px;
+}
+.book .container .testiSide .boxTestimonial .profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+.book .container .testiSide .boxTestimonial .profile p{
+    white-space: nowrap;
+}
+.book .container .testiSide .boxTestimonial .profile img{
+    height: 48px;
+}
+.book .container .testiSide .boxTestimonial span.border{
+    height: 100%;
+    width: 2px;
+    background-color: #1d1d1d;
+    opacity: .15;
+}
+.book .container .testiSide .boxTestimonial .detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+    gap: 8px;
+}
+.book .container .testiSide .boxTestimonial .detail .italic{
+    font-style: italic;
+}
+.book.expensive .container{
+    flex-direction: row-reverse;
+}
+.book.expensive .container .testiSide{
+    background-image: url(../imgs/package_expensive.png);
+}
+@media screen and (max-width : 1024px) {
+    .book.expensive .container .testiSide{
+        flex: 2.5;
+    }
+}
+@media screen and (max-width : 900px) {
+    .book .container{
+        flex-direction: column;
+    }
+    .book .container .testiSide{
+        height: 40vh;
+        min-height: 400px;
+        max-height: 560px;
+        flex: unset;
+    }
+}
+@media screen and (max-width : 875px) {
+    .book.expensive .container{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width : 562px) {
+    .book .container .testiSide .boxTestimonial{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .book .container .testiSide .boxTestimonial span.border{
+        height: 1px;
+        width: 100%;
+    }
+    .book .container .testiSide .boxTestimonial .detail{
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .book .container .testiSide{
+        aspect-ratio: 4 / 3;
+        min-width: unset;
+        min-height: unset;
+        max-height: unset;
+        height: unset;
+    }
+}
+/* booking */
+
+
+
